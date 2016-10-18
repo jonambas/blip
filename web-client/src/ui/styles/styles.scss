@@ -1,0 +1,79 @@
+/* 
+ * Vendor 
+ */
+@import "vendor/normalize";
+
+/* 
+ * Batter! 🍰
+ */
+@import "batter/bits";
+@import "batter/functions";
+@import "batter/base";
+// @import "batter/oldinlineblockgrid";
+@import "batter/thisgridisprettyflexy";
+@import "batter/typography";
+@import "batter/helpers";
+
+/* 
+ * Components 
+ */
+// @import "components/component";
+
+html, body, #root {
+  height: 100%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  a {
+    display: inline-block;
+    padding: rem(12) rem(16);
+    text-decoration: none;
+  }
+}
+
+fieldset {
+  padding: 0;
+  margin: 0 0 1.5rem;
+  border: none;
+  text-align: left;
+
+  input {
+    display: block;
+    width: 100%;
+    padding: rem(9) rem(12);
+    border: 1px solid darken(color(off-white), 8);
+  }
+
+  label {
+    display: block;
+    margin-bottom: rem(9);
+    font-size: rem(15);
+  }
+}
+
+button[type='submit'] {
+  float: right;
+
+  padding: rem(9) rem(18);  
+  background: darken(color(off-white), 3);
+  border: none;
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+  }
+}
+
